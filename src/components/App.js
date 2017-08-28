@@ -50,10 +50,12 @@ componentDidMount() {
       <div>
         <BaseLayout>
           <div className="menu col-md-10 col-md-offset-1">
-            <h2 className="col-md-offset-3">Menu</h2>
+            <h2 className="col-md-offset-2">Menu</h2>
 
             <Appetizers appetizers= {this.state.appetizers}/>
+            <hr className="col-sm-8 col-sm-offset-2" />
             <Entrees entrees = {this.state.entrees} />
+            <hr className="col-sm-8 col-sm-offset-2" />
             <Desserts desserts = {this.state.entrees}/>
           </div>
 

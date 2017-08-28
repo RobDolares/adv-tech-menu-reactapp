@@ -11,11 +11,11 @@ export default class BaseLayout extends Component {
       */}
     let titleStyle = {
         "fontFamily": "Arizonia",
-        "fontSize": "150"
+        "fontSize": "10vw"
       }
     let subtitleStyle = {
       "fontFamily": "Raleway",
-      "fontSize": "80"
+      "fontSize": "6vw"
     }
 
 
@@ -55,8 +55,8 @@ export default class BaseLayout extends Component {
             </ul>
           </div>
           <div className="col-md-12 header" style={headerStyle}>
-            <div className="header-title" style={titleStyle}>
-              <h1 className="restaurant-name">Majestic Thai</h1>
+            <div className="header-title">
+              <h1 className="restaurant-name" style={titleStyle}>Majestic Thai</h1>
               <h3 className="subtitle" style={subtitleStyle}>East Meets West</h3>
             </div>
           </div>

@@ -24,8 +24,8 @@ export default class Desserts extends Component {
     })
     return (
       <div className="row">
-        <div className="col-md-6 col-md-offset-3">
-          <h4 className="menu-section-headers">Desserts</h4>
+        <div className="col-md-8 col-md-offset-2">
+          <h4 className="menu-section-headers col-sm-8"><strong>Desserts</strong></h4>
           <table className="table">
             <thead>
               <tr>
