@@ -13,4 +13,4 @@
 
 Menu Mockup:
 
-![MockUp](/public/menu_mockup.jpg)
+![MockUp](/public/menu_mockup.jpeg)

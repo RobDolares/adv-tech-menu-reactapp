@@ -8,3 +8,7 @@ nav{
 .menu{
   background-color: white;
 }
+
+.menu-section-headers{
+  font-size: 2em;
+}

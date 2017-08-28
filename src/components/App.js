@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 // Import BaseLayout, Appetizers, Entrees, Desserts
 
-import BaseLayout from './BaseLayout';
+import BaseLayout from './Layout';
 import Appetizers from './Appetizers';
 import Entrees from './Entrees';
 import Desserts from './Desserts';
@@ -30,7 +30,12 @@ componentDidMount() {
     fetch('http://tiny-lasagna-server.herokuapp.com/collections/reactthaimenu')
     .then(results => results.json())
     .then(responseData => {
-      this.setState({appetizers: responseData.results});
+      let menu= responseData[0]
+      this.setState({
+        appetizers: menu.Appetizers,
+        entrees: menu.Entrees,
+        desserts: menu.desserts
+      });
     })
     .catch((error) => {
       console.log("Error with Fetching : ", error);
@@ -42,11 +47,20 @@ componentDidMount() {
     // Your render should consist of the BaseLayout with the following children components: Appetizers, Entrees, and Dessert.
     // Each component needs to receive state via props.
     return (
-      {
+      <div>
         <BaseLayout>
+          <div className="menu col-md-10 col-md-offset-1">
+            <h2 className="col-md-offset-3">Menu</h2>
+
+            <Appetizers appetizers= {this.state.appetizers}/>
+            <Entrees entrees = {this.state.entrees} />
+            <Desserts desserts = {this.state.entrees}/>
+          </div>
 
         </BaseLayout>
-        }
+      </div>
+
+
     );
   }
 }

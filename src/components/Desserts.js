@@ -4,7 +4,7 @@ export default class Desserts extends Component {
 
   render(){
     // Set items' value....
-    let items = '';
+    let items = this.props.desserts;
     // Since the items do not have a key, let's create one.
     let key = 0;
     let desserts = items.map((items)=>{
@@ -25,7 +25,7 @@ export default class Desserts extends Component {
     return (
       <div className="row">
         <div className="col-md-6 col-md-offset-3">
-          <h4>Desserts</h4>
+          <h4 className="menu-section-headers">Desserts</h4>
           <table className="table">
             <thead>
               <tr>

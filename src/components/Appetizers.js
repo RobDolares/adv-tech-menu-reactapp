@@ -4,9 +4,9 @@ export default class Appetizers extends Component {
 
   render(){
     // Set items' value....
-    let items = '',
+    let items = this.props.appetizers,
     // Since the items do not have a key, let's create one.
-    let key = 0;
+    key = 0;
     let appetizers = items.map((items)=>{
       // Increment the key so that each items has one.
       key++;
@@ -23,7 +23,7 @@ export default class Appetizers extends Component {
     return (
       <div className="row">
         <div className="col-md-6 col-md-offset-3">
-        <h4>Appetizers</h4>
+        <h4 className="menu-section-headers">Appetizers</h4>
           <table className="table">
             <thead>
               <tr>

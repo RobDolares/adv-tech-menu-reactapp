@@ -4,10 +4,10 @@ export default class Entrees extends Component {
 
   render(){
     // Set items' value....
-    let items = '';
+    let items = this.props.entrees;
     // Since the items do not have a key, let's create one.
     let key = 0;
-    let entres = items.map((items)=>{
+    let entrees = items.map((items)=>{
       // Increment the key for each item.
       key++;
       console.log(key)
@@ -25,7 +25,7 @@ export default class Entrees extends Component {
     return (
       <div className="row">
         <div className="col-md-6 col-md-offset-3">
-          <h4>Entres</h4>
+          <h4 className="menu-section-headers">Entrees</h4>
           <table className="table">
             <thead>
               <tr>
@@ -34,7 +34,7 @@ export default class Entrees extends Component {
                 <th className="col-md-1">Price</th>
               </tr>
             </thead>
-            {entres}
+            {entrees}
           </table>
         </div>
       </div>
